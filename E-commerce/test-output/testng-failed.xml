@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [E-commerce Website Automation Test]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value="Firefox"/>
+  <parameter name="browser" value="Default"/>
   <test thread-count="5" name="Authorization(failed)">
     <classes>
-      <class name="authentication.Login">
+      <class name="authentication.TestLogin">
         <methods>
-          <include name="tC_03test_Failed1"/>
+          <include name="Tc_04"/>
           <include name="SetUpSuit"/>
-          <include name="tC_02test_Failed"/>
         </methods>
-      </class> <!-- authentication.Login -->
+      </class> <!-- authentication.TestLogin -->
     </classes>
   </test> <!-- Authorization(failed) -->
 </suite> <!-- Failed suite [E-commerce Website Automation Test] -->

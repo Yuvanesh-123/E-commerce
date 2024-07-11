@@ -9,28 +9,58 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">E-commerce Website Automation Test</th></tr>
-<tr><td><a href="#t0">Authorization</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">4,367</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Suit Set UP</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">15</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Authorization</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">3,473</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">7</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">3,488</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">E-commerce Website Automation Test</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Authorization &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">authentication.Login</td><td><a href="#m0">tC_02test_Failed</a></td><td rowspan="1">1720534665180</td><td rowspan="1">133</td></tr><tr class="failedeven"><td><a href="#m1">tC_03test_Failed1</a></td><td rowspan="1">1720534665321</td><td rowspan="1">304</td></tr><tr><th colspan="4">Authorization &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">authentication.Login</td><td><a href="#m2">tC_01test_passed</a></td><td rowspan="1">1720534662670</td><td rowspan="1">2505</td></tr><tr class="passedeven"><td><a href="#m3">tC_04test_Skip</a></td><td rowspan="1">1720534665644</td><td rowspan="1">3</td></tr><tr class="passedeven"><td><a href="#m4">tc_05PomTest</a></td><td rowspan="1">1720534665654</td><td rowspan="1">1313</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">E-commerce Website Automation Test</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Authorization &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">authentication.TestLogin</td><td><a href="#m0">Tc_04</a></td><td rowspan="1">1720708142550</td><td rowspan="1">421</td></tr><tr><th colspan="4">Authorization &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">authentication.TestLogin</td><td><a href="#m1">Tc_01</a></td><td rowspan="1">1720708140332</td><td rowspan="1">1936</td></tr><tr class="passedeven"><td><a href="#m2">Tc_02</a></td><td rowspan="1">1720708142273</td><td rowspan="1">55</td></tr><tr class="passedeven"><td><a href="#m3">Tc_03</a></td><td rowspan="1">1720708142333</td><td rowspan="1">210</td></tr><tr class="passedeven"><td><a href="#m4">Tc_05</a></td><td rowspan="1">1720708142982</td><td rowspan="1">234</td></tr><tr class="passedeven"><td><a href="#m5">Tc_06</a></td><td rowspan="1">1720708143220</td><td rowspan="1">227</td></tr><tr class="passedeven"><td><a href="#m6">Tc_07</a></td><td rowspan="1">1720708143450</td><td rowspan="1">140</td></tr><tr class="passedeven"><td><a href="#m7">Tc_08</a></td><td rowspan="1">1720708143594</td><td rowspan="1">148</td></tr></tbody>
 </table>
-<h2>Authorization</h2><h3 id="m0">authentication.Login#tC_02test_Failed</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: java.lang.AssertionError
-	at baseClases.Helper.triggerAssertFail(Helper.java:112)
-	at authentication.Login.tC_02test_Failed(Login.java:60)
+<h2>Suit Set UP</h2><h2>Authorization</h2><h3 id="m0">authentication.TestLogin#Tc_04</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#Email\-error&quot;}
+  (Session info: chrome=126.0.6478.127)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cb4563068b0a1a2ed4d648fba0996c51, findElement {using=id, value=Email-error}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65029}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65029/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cb4563068b0a1a2ed4d648fba0996c51
+	at baseClases.Helper.triggerExceptionFail(Helper.java:132)
+	at authentication.TestLogin.Tc_04(TestLogin.java:101)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: java.lang.AssertionError
-	at authentication.Login.tC_02test_Failed(Login.java:55)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#Email\-error&quot;}
+  (Session info: chrome=126.0.6478.127)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cb4563068b0a1a2ed4d648fba0996c51, findElement {using=id, value=Email-error}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65029}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65029/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cb4563068b0a1a2ed4d648fba0996c51
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.getText(Unknown Source)
+	at pom.PomLogin.getEmailErrorMessage(PomLogin.java:66)
+	at authentication.TestLogin.Tc_04(TestLogin.java:97)
 	... 26 more
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">authentication.Login#tC_03test_Failed1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: java.lang.Exception
-	at baseClases.Helper.triggerExceptionFail(Helper.java:131)
-	at authentication.Login.tC_03test_Failed1(Login.java:72)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: java.lang.Exception
-	at authentication.Login.tC_03test_Failed1(Login.java:70)
-	... 26 more
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">authentication.Login#tC_01test_passed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">authentication.Login#tC_04test_Skip</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">authentication.Login#tc_05PomTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">authentication.TestLogin#Tc_01</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">authentication.TestLogin#Tc_02</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">authentication.TestLogin#Tc_03</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">authentication.TestLogin#Tc_05</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">authentication.TestLogin#Tc_06</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">authentication.TestLogin#Tc_07</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">authentication.TestLogin#Tc_08</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

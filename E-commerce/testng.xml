@@ -2,12 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="E-commerce Website Automation Test">
-	<parameter name="browser" value="Firefox" />
-  <test  name="Authorization">
-	  
-    <classes>		
-      <class name="baseClases.SetUp"/>
-      <class name="authentication.Login"/>
+	
+	 <!-- Value can be Default, Firefox and Edge, For Default will Launch Chrome -->
+	<parameter name="browser" value="Default" /> 
+	
+	<test name="Suit Set UP">
+		<classes>
+			  <class name="baseClases.SetUp"/>
+		</classes>
+	</test>
+	
+  <test  name="Authorization">	  
+    <classes>		    
+      <class name="authentication.TestLogin"/>
     </classes>
   </test> <!-- Authorization -->
 </suite> <!-- E-commerce Website Automation Test -->

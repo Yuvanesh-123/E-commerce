@@ -44,6 +44,7 @@ public class Helper {
 			break;
 		}
 		
+		
 	}
 
 	public static WebDriver getDriver() {
@@ -103,11 +104,11 @@ public class Helper {
 	 *                 Fail__test_cases And throw's the Assertion Error in the
 	 *                 console and fail the test_cases method()
 	 */
-	public static void triggerAssertFail(ExtentTest test, AssertionError error) {
+	public static void triggerAssertFail(ExtentTest test, AssertionError error, String  Fail) {
 		String ScreenShot = CaptureScreenshot();
 		String errormessage = error.getMessage();
 		// Creating Report with throwable error
-		test.fail(error).addScreenCaptureFromBase64String(ScreenShot, errormessage);
+		test.fail(Fail).addScreenCaptureFromBase64String(ScreenShot, errormessage);
 		// throw the error in console page
 		throw new AssertionError(error);
 	}
@@ -122,11 +123,11 @@ public class Helper {
 	 *                   And throw's the Exception in the console and fail the
 	 *                   test_cases method()
 	 */
-	public static void triggerExceptionFail(ExtentTest testCase, Exception e) throws Exception {
+	public static void triggerExceptionFail(ExtentTest testCase, Exception e, String Fail) throws Exception {
 		String ScreenShot = CaptureScreenshot();
 		String errormessage = e.getMessage();
 		// Creating Report with throwable error
-		testCase.fail(e).addScreenCaptureFromBase64String(ScreenShot, errormessage);
+		testCase.fail(Fail).addScreenCaptureFromBase64String(ScreenShot, errormessage);
 		// throw the error in console page
 		throw new Exception(e);
 	}

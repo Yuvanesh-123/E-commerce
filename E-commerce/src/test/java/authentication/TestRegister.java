@@ -1,5 +1,5 @@
 package authentication;
 
-public class Register {
+public class TestRegister {
 
 }
