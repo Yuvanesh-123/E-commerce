@@ -1,5 +1,6 @@
 package baseClases;
 
+import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.openqa.selenium.OutputType;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -21,16 +23,14 @@ public class Helper {
 	static WebDriver driver;
 	static ExtentReports report;
 	static String currentTimeStamp;
-	
-	
-	
+
 	public static void initializeWebdrivers(String browser) {
 //		String Browsers = browser;
 		switch (browser) {
 		case "Firefox":
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-			driver.manage().window().maximize();			
+			driver.manage().window().maximize();
 			break;
 		case "Edge":
 			WebDriverManager.edgedriver().setup();
@@ -38,13 +38,15 @@ public class Helper {
 			driver.manage().window().maximize();
 
 		default:
+//			WebDriverManager webdriverManager = WebDriverManager.chromedriver().browserInDocker().enableRecording();
+////					.dockerRecordingOutput("D:\\Eclipse\\E-commerce\\E-commerce\\Test Report");
+//			driver = webdriverManager.create();
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			break;
 		}
-		
-		
+
 	}
 
 	public static WebDriver getDriver() {
@@ -53,6 +55,7 @@ public class Helper {
 		}
 		return driver;
 	}
+
 	public static WebDriver getDriver(String Browser) {
 		if (driver == null) {
 			initializeWebdrivers(Browser);
@@ -65,24 +68,20 @@ public class Helper {
 	 * with TimeStamp.
 	 */
 	public static void initializeExtentReport() {
-		Date date = new Date();	
+		Date date = new Date();
 		SimpleDateFormat formattedTime = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss");
 		currentTimeStamp = formattedTime.format(date);
 		report = new ExtentReports();
 		ExtentSparkReporter allTestCasesReport = new ExtentSparkReporter(
-				"D:\\Eclipse\\E-commerce\\E-commerce\\Test Report\\" + currentTimeStamp
-						+ "\\All_test_cases.html");
+				"D:\\Eclipse\\E-commerce\\E-commerce\\Test Report\\" + currentTimeStamp + "\\All_test_cases.html");
 		ExtentSparkReporter passedTestCasesReport = new ExtentSparkReporter(
-				"D:\\Eclipse\\E-commerce\\E-commerce\\Test Report\\" + currentTimeStamp
-						+ "\\Passed_test_cases.html")
+				"D:\\Eclipse\\E-commerce\\E-commerce\\Test Report\\" + currentTimeStamp + "\\Passed_test_cases.html")
 				.filter().statusFilter().as(new Status[] { Status.PASS }).apply();
 		ExtentSparkReporter failedTestCasesReport = new ExtentSparkReporter(
-				"D:\\Eclipse\\E-commerce\\E-commerce\\Test Report\\" + currentTimeStamp
-						+ "\\Failed_test_cases.html")
+				"D:\\Eclipse\\E-commerce\\E-commerce\\Test Report\\" + currentTimeStamp + "\\Failed_test_cases.html")
 				.filter().statusFilter().as(new Status[] { Status.FAIL }).apply();
 		ExtentSparkReporter skipedTestCasesReport = new ExtentSparkReporter(
-				"D:\\Eclipse\\E-commerce\\E-commerce\\Test Report\\" + currentTimeStamp
-						+ "\\Skiped_test_cases.html")
+				"D:\\Eclipse\\E-commerce\\E-commerce\\Test Report\\" + currentTimeStamp + "\\Skiped_test_cases.html")
 				.filter().statusFilter().as(new Status[] { Status.SKIP }).apply();
 		report.attachReporter(allTestCasesReport, passedTestCasesReport, failedTestCasesReport, skipedTestCasesReport);
 	}
@@ -93,9 +92,7 @@ public class Helper {
 		}
 		return report;
 	}
-	
-	
-	
+
 	/**
 	 * 
 	 * @param testCase (ExtentTest)
@@ -104,7 +101,7 @@ public class Helper {
 	 *                 Fail__test_cases And throw's the Assertion Error in the
 	 *                 console and fail the test_cases method()
 	 */
-	public static void triggerAssertFail(ExtentTest test, AssertionError error, String  Fail) {
+	public static void triggerAssertFail(ExtentTest test, AssertionError error, String Fail) {
 		String ScreenShot = CaptureScreenshot();
 		String errormessage = error.getMessage();
 		// Creating Report with throwable error
@@ -112,8 +109,7 @@ public class Helper {
 		// throw the error in console page
 		throw new AssertionError(error);
 	}
-	
-	
+
 	/**
 	 * 
 	 * @param testCase (ExtentTest)
@@ -131,19 +127,17 @@ public class Helper {
 		// throw the error in console page
 		throw new Exception(e);
 	}
-	
 
 	public static String CaptureScreenshot() {
-		
+
 		String Base64code = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
 		return Base64code;
 	}
-	
-	
+
 	public enum Pages {
 		Register, Login, Purchase
 	}
-	
+
 	public static ExtentTest createTest(Pages pages, String testCaseName) {
 		// Creating or getting the ExtentsReport
 		ExtentReports report = getExtentReport();
@@ -164,14 +158,9 @@ public class Helper {
 			test = report.createTest(String.format("Purchase - %s", testCaseName));
 			test.assignCategory("Purchase");
 			return test;
-		
 
 		}
 		return null;
 	}
-
-
-
-
 
 }

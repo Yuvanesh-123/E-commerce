@@ -9,6 +9,8 @@ import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentReporter;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class SetUp {
 WebDriver driver;
 ExtentReports report;
@@ -22,8 +24,9 @@ ExtentReports report;
 	}
 	
 	@AfterSuite
-	public void tearDown () {
-		driver.quit();
-		report.flush();
+	public void cleanUP () {
+//		driver.quit();
+//		report.flush();
+		
 	}
 }

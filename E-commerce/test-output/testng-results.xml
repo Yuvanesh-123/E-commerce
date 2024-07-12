@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="13" passed="12" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-11T19:59:00 IST" name="E-commerce Website Automation Test" finished-at="2024-07-11T19:59:03 IST" duration-ms="3508">
+  <suite started-at="2024-07-12T19:21:30 IST" name="E-commerce Automation Test" finished-at="2024-07-12T19:21:34 IST" duration-ms="3931">
     <groups>
     </groups>
-    <test started-at="2024-07-11T19:59:00 IST" name="Suit Set UP" finished-at="2024-07-11T19:59:00 IST" duration-ms="15">
+    <test started-at="2024-07-12T19:21:30 IST" name="Suit Set UP" finished-at="2024-07-12T19:21:30 IST" duration-ms="12">
     </test> <!-- Suit Set UP -->
-    <test started-at="2024-07-11T19:59:00 IST" name="Authorization" finished-at="2024-07-11T19:59:03 IST" duration-ms="3473">
+    <test started-at="2024-07-12T19:21:30 IST" name="Authorization" finished-at="2024-07-12T19:21:34 IST" duration-ms="3904">
       <class name="baseClases.SetUp">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:baseClases.SetUp@1165b38]" started-at="2024-07-11T19:58:57 IST" name="setUp" finished-at="2024-07-11T19:59:00 IST" duration-ms="2581" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:baseClases.SetUp@1165b38]" started-at="2024-07-12T19:21:28 IST" name="setUp" finished-at="2024-07-12T19:21:30 IST" duration-ms="2397" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,29 +20,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:baseClases.SetUp@1165b38]" started-at="2024-07-11T19:59:03 IST" name="tearDown" finished-at="2024-07-11T19:59:05 IST" duration-ms="1640" status="PASS">
+        <test-method is-config="true" signature="cleanUP()[pri:0, instance:baseClases.SetUp@1165b38]" started-at="2024-07-12T19:21:34 IST" name="cleanUP" finished-at="2024-07-12T19:21:34 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- cleanUP -->
       </class> <!-- baseClases.SetUp -->
       <class name="authentication.TestLogin">
-        <test-method is-config="true" signature="SetUpSuit()[pri:0, instance:authentication.TestLogin@79d8407f]" started-at="2024-07-11T19:59:00 IST" name="SetUpSuit" finished-at="2024-07-11T19:59:00 IST" duration-ms="25" status="PASS">
+        <test-method is-config="true" signature="classSetup()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:30 IST" name="classSetup" finished-at="2024-07-12T19:21:30 IST" duration-ms="22" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SetUpSuit -->
-        <test-method signature="Tc_01()[pri:0, instance:authentication.TestLogin@79d8407f]" started-at="2024-07-11T19:59:00 IST" name="Tc_01" finished-at="2024-07-11T19:59:02 IST" duration-ms="1936" status="PASS">
+        </test-method> <!-- classSetup -->
+        <test-method signature="Tc_01()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:30 IST" name="Tc_01" finished-at="2024-07-12T19:21:33 IST" duration-ms="2608" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc_01 -->
-        <test-method signature="Tc_02()[pri:0, instance:authentication.TestLogin@79d8407f]" started-at="2024-07-11T19:59:02 IST" name="Tc_02" finished-at="2024-07-11T19:59:02 IST" duration-ms="55" status="PASS">
+        <test-method signature="Tc_02()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:33 IST" name="Tc_02" finished-at="2024-07-12T19:21:33 IST" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc_02 -->
-        <test-method signature="Tc_03()[pri:0, instance:authentication.TestLogin@79d8407f]" started-at="2024-07-11T19:59:02 IST" name="Tc_03" finished-at="2024-07-11T19:59:02 IST" duration-ms="210" status="PASS">
+        <test-method signature="Tc_03()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:33 IST" name="Tc_03" finished-at="2024-07-12T19:21:33 IST" duration-ms="132" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc_03 -->
-        <test-method signature="Tc_04()[pri:0, instance:authentication.TestLogin@79d8407f]" started-at="2024-07-11T19:59:02 IST" name="Tc_04" finished-at="2024-07-11T19:59:02 IST" duration-ms="421" status="FAIL">
+        <test-method signature="Tc_04()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:33 IST" name="Tc_04" finished-at="2024-07-12T19:21:33 IST" duration-ms="299" status="FAIL">
           <exception class="java.lang.Exception">
             <message>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#Email\-error"}
@@ -51,9 +51,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cb4563068b0a1a2ed4d648fba0996c51, findElement {using=id, value=Email-error}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65029}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65029/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cb4563068b0a1a2ed4d648fba0996c51]]>
+Command: [09bee3d66c50e1ee658d0081ed73307a, findElement {using=id, value=Email-error}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56784}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56784/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 09bee3d66c50e1ee658d0081ed73307a]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.Exception: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#Email\-error"}
@@ -62,11 +62,11 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cb4563068b0a1a2ed4d648fba0996c51, findElement {using=id, value=Email-error}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65029}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65029/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cb4563068b0a1a2ed4d648fba0996c51
-at baseClases.Helper.triggerExceptionFail(Helper.java:132)
-at authentication.TestLogin.Tc_04(TestLogin.java:101)
+Command: [09bee3d66c50e1ee658d0081ed73307a, findElement {using=id, value=Email-error}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56784}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56784/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 09bee3d66c50e1ee658d0081ed73307a
+at baseClases.Helper.triggerExceptionFail(Helper.java:128)
+at authentication.TestLogin.Tc_04(TestLogin.java:102)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -99,9 +99,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cb4563068b0a1a2ed4d648fba0996c51, findElement {using=id, value=Email-error}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65029}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65029/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cb4563068b0a1a2ed4d648fba0996c51
+Command: [09bee3d66c50e1ee658d0081ed73307a, findElement {using=id, value=Email-error}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56784}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56784/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 09bee3d66c50e1ee658d0081ed73307a
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -119,8 +119,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy16.getText(Unknown Source)
-at pom.PomLogin.getEmailErrorMessage(PomLogin.java:66)
-at authentication.TestLogin.Tc_04(TestLogin.java:97)
+at pom.PomLogin.getEmailErrorMessage(PomLogin.java:67)
+at authentication.TestLogin.Tc_04(TestLogin.java:98)
 ... 26 more
 ]]>
             </full-stacktrace>
@@ -128,23 +128,50 @@ at authentication.TestLogin.Tc_04(TestLogin.java:97)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc_04 -->
-        <test-method signature="Tc_05()[pri:0, instance:authentication.TestLogin@79d8407f]" started-at="2024-07-11T19:59:02 IST" name="Tc_05" finished-at="2024-07-11T19:59:03 IST" duration-ms="234" status="PASS">
+        <test-method signature="Tc_05()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:33 IST" name="Tc_05" finished-at="2024-07-12T19:21:34 IST" duration-ms="138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc_05 -->
-        <test-method signature="Tc_06()[pri:0, instance:authentication.TestLogin@79d8407f]" started-at="2024-07-11T19:59:03 IST" name="Tc_06" finished-at="2024-07-11T19:59:03 IST" duration-ms="227" status="PASS">
+        <test-method signature="Tc_06()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:34 IST" name="Tc_06" finished-at="2024-07-12T19:21:34 IST" duration-ms="138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc_06 -->
-        <test-method signature="Tc_07()[pri:0, instance:authentication.TestLogin@79d8407f]" started-at="2024-07-11T19:59:03 IST" name="Tc_07" finished-at="2024-07-11T19:59:03 IST" duration-ms="140" status="PASS">
+        <test-method signature="Tc_07()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:34 IST" name="Tc_07" finished-at="2024-07-12T19:21:34 IST" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc_07 -->
-        <test-method signature="Tc_08()[pri:0, instance:authentication.TestLogin@79d8407f]" started-at="2024-07-11T19:59:03 IST" name="Tc_08" finished-at="2024-07-11T19:59:03 IST" duration-ms="148" status="PASS">
+        <test-method signature="Tc_08()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:34 IST" name="Tc_08" finished-at="2024-07-12T19:21:34 IST" duration-ms="83" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc_08 -->
+        <test-method signature="Tc_09()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:34 IST" name="Tc_09" finished-at="2024-07-12T19:21:34 IST" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_09 -->
+        <test-method signature="Tc_10()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:34 IST" name="Tc_10" finished-at="2024-07-12T19:21:34 IST" duration-ms="120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_10 -->
+        <test-method signature="Tc_11()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:34 IST" name="Tc_11" finished-at="2024-07-12T19:21:34 IST" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_11 -->
+        <test-method signature="Tc_12(java.lang.String)[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:34 IST" name="Tc_12" finished-at="2024-07-12T19:21:34 IST" duration-ms="117" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testing123@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_12 -->
+        <test-method signature="Tc_13()[pri:0, instance:authentication.TestLogin@707194ba]" started-at="2024-07-12T19:21:34 IST" name="Tc_13" finished-at="2024-07-12T19:21:34 IST" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_13 -->
       </class> <!-- authentication.TestLogin -->
     </test> <!-- Authorization -->
-  </suite> <!-- E-commerce Website Automation Test -->
+  </suite> <!-- E-commerce Automation Test -->
 </testng-results>

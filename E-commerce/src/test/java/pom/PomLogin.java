@@ -1,6 +1,7 @@
 package pom;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,9 +17,9 @@ public class PomLogin {
 	    }
 	 
 	 @FindBy(linkText = "Log in")
-	 WebElement logInButton;
-	 public void clickLogInButton() {
-		 logInButton.click();
+	 WebElement loginText;
+	 public void clickloginText() {
+		 loginText.click();
 		 
 	 }
 	 
@@ -66,11 +67,51 @@ public class PomLogin {
 		 String errorMessage = emailError.getText();
 		 return errorMessage;
 	 }
+	 public boolean isEmailErrorMessageDisplayed() {
+		 boolean isDisplayed =true;
+		 try {
+			 String errorMessage = emailError.getText();
+		} catch (NoSuchElementException e) {
+			isDisplayed =false;
+		}return isDisplayed;
+	 }
 	 
 	 
 	 @FindBy(id ="Password")
 	 WebElement passwordInput;
+	 public void enterPassword (String password) {
+		 passwordInput.sendKeys(password);
+	 }
+	 public String getEnteredPassword() {
+		 String enteredpassword =passwordInput.getAttribute("value");
+		 return enteredpassword;
+	 }
+	 public boolean isPasswordVisible() {
+		 String attribute = passwordInput.getAttribute("type");
+//		 boolean passwordVisible= true;
+//		 System.out.println("attribute : "+attribute);
+//		 if (attribute.equals("password") ) {
+//			 passwordVisible= false;
+//		 }return passwordVisible;		 
+		 return !attribute.equals("password");
+	 }
 	 
 	 
-
+	 @FindBy(xpath = "//label[@for='Password']")
+	 WebElement passwordText;
+	 public String getPasswordText() {
+		 String text = passwordText.getText();
+		 return text;
+	 }
+	 
+	 @FindBy(className = "login-button")
+	 WebElement logInButton;
+	 public String getLoginText() {
+		 String loginText = logInButton.getText();
+		 return loginText;
+	 }
+	 public void clickLogInButton() {
+		 logInButton.click();
+	 }
+	
 }
