@@ -20,6 +20,7 @@ ExtentReports report;
 	public void setUp(String browser) {
 		driver =Helper.getDriver(browser);
 		report = Helper.getExtentReport();
+		driver.get("https://demo.nopcommerce.com/");
 		
 	}
 	

@@ -41,7 +41,6 @@ public class TestLogin {
 		ExtentTest test = this.getReportTestCase(" Verify the \"Welcome, Please Sign In!\" text is presented or not");
 
 		try {
-			driver.get("https://demo.nopcommerce.com/");
 			pom.clickloginText();
 			String tittleText = pom.getTittleText();
 			Assert.assertEquals(tittleText, "Welcome, Please Sign In!");
@@ -139,7 +138,7 @@ public class TestLogin {
 			Assert.assertEquals(enterNumbers, "!@#$%^&*");
 			test.pass("The Email field is enterable for Special Charactes");
 		} catch (Exception e) {
-			Helper.triggerExceptionFail(test, e, "In Tc_06 while entering and getting the text");
+			Helper.triggerExceptionFail(test, e, "In Tc_06 while entering and getting the error text");
 
 		} catch (AssertionError e) {
 			Helper.triggerAssertFail(test, e, "In Tc_06  Email Input Field is not enterable for Special Characters ");
@@ -230,7 +229,7 @@ public class TestLogin {
 
 		try {
 			boolean isPasswordVisible = pom.isPasswordVisible();
-			System.out.println("isPasswordVisible : "+isPasswordVisible);
+			System.out.println("isPasswordVisible : " + isPasswordVisible);
 			Assert.assertEquals(isPasswordVisible, false);
 			test.pass("The Password field's entered text is not visible");
 		} catch (Exception e) {
@@ -239,14 +238,14 @@ public class TestLogin {
 			Helper.triggerAssertFail(test, e, "In Tc_03 The Password is visible ");
 		}
 	}
-	
+
 	@Test
-	@Parameters("Email")
-	public void Tc_12(String Email) throws Exception {
+	
+	public void Tc_12() throws Exception {
 		ExtentTest test = this.getReportTestCase("Verify the Error message displayed when entered valid email");
 
 		try {
-			pom.enterEmail(Email);
+			pom.enterEmail("test01@gmail.com");
 			boolean emailErrorMessageDisplayed = pom.isEmailErrorMessageDisplayed();
 			Assert.assertEquals(emailErrorMessageDisplayed, false);
 			test.pass("The Error message is not  display when entered valid email ");
@@ -259,7 +258,7 @@ public class TestLogin {
 		}
 
 	}
-	
+
 	@Test
 	public void Tc_13() throws Exception {
 		ExtentTest test = this.getReportTestCase("Verify the Login button & Login text is displayed or not");
@@ -268,7 +267,7 @@ public class TestLogin {
 			String loginText = pom.getLoginText();
 			Assert.assertEquals(loginText, "LOG IN");
 
-			test.pass("The LOG IN button is displayed and the text is "+loginText);
+			test.pass("The LOG IN button is displayed and the text is " + loginText);
 		} catch (Exception e) {
 			Helper.triggerExceptionFail(test, e, " In Tc_13 The login button is not displayed");
 
@@ -278,7 +277,52 @@ public class TestLogin {
 		}
 
 	}
-	
-	
+
+	@Test
+	public void Tc_14() throws Exception {
+		ExtentTest test = this.getReportTestCase("Verify the Login button display the error message or not ");
+
+		try {
+			pom.toViewLoginButton(driver);
+			pom.clickLogInButton();
+			String errorMessage = pom.getErrorMessage();
+//			Assert.assertEquals(errorMessage, "Login was unsuccessful. Please correct the errors and try again.\r\n"
+//					+ "No customer account found");
+			boolean IsUnsuccessful = errorMessage.contains("Login was unsuccessful.");
+			Assert.assertEquals(IsUnsuccessful, true);
+			test.pass("The \"" + errorMessage + "\" is displayed with invalid credentials");
+		} catch (Exception e) {
+			Helper.triggerExceptionFail(test, e, "In Tc_14 The Login button is not display the error message ");
+
+		} catch (AssertionError e) {
+			Helper.triggerAssertFail(test, e, "In Tc_14 Login button is not display the error message ");
+
+		}
+
+	}
+	@Test
+	@Parameters({"Email","Password"})
+
+	public void Tc_15(String Email, String Password) throws Exception {
+		ExtentTest test = this.getReportTestCase("Verify the Login button login sucessfully or not ");
+
+		try {
+			pom.enterEmail(Email);
+			pom.enterPassword(Password);
+			pom.toViewLoginButton(driver);
+			pom.clickLogInButton();
+			String logOutText = pom.getLogOutText();
+			Assert.assertEquals(logOutText, "Log out");
+			test.pass("The Login sucessfully done with valid credinitials");
+		} catch (Exception e) {
+			Helper.triggerExceptionFail(test, e, "In Tc_15 The Login was not sucessfull ");
+
+		} catch (AssertionError e) {
+			Helper.triggerAssertFail(test, e, "In Tc_15 The Login was not sucessfull ");
+
+		}
+
+	}
+
 //	
 }

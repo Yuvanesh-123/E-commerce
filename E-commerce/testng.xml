@@ -13,9 +13,11 @@
 	</test>
 	
   <test  name="Authorization">
-	  <parameter name="Email" value="testing123@gmail.com"/>	  
+	  <parameter name="Email" value="automation01@gmail.com"/>
+	   <parameter name="Password" value="Password@123"/>	  
     <classes>		    
-      <class name="authentication.TestLogin"/>
+      <class name="authentication.TestRegister"/>
     </classes>
   </test> <!-- Authorization -->
 </suite> <!-- E-commerce Website Automation Test -->
+		

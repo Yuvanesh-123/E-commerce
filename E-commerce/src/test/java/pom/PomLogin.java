@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import baseClases.Utility;
+
 public class PomLogin {
 	WebDriver driver;
 	
@@ -81,6 +83,7 @@ public class PomLogin {
 	 WebElement passwordInput;
 	 public void enterPassword (String password) {
 		 passwordInput.sendKeys(password);
+		
 	 }
 	 public String getEnteredPassword() {
 		 String enteredpassword =passwordInput.getAttribute("value");
@@ -113,5 +116,23 @@ public class PomLogin {
 	 public void clickLogInButton() {
 		 logInButton.click();
 	 }
-	
+	 public void toViewLoginButton(WebDriver driver ) throws InterruptedException {
+		 Utility.scrollIntoView(driver, logInButton);
+	 }
+	 
+	 @FindBy(className = "message-error")
+	 WebElement loginError;
+	 public String getErrorMessage() {
+		 String errorMessage = loginError.getText();
+		 return errorMessage;
+	 }
+	 @FindBy(linkText = "Log out")
+	 WebElement logOutText;
+	public void clickLogOutText() {
+		logOutText.click();
+	}
+	public String getLogOutText() {
+		String textLogOut = logOutText.getText();
+		return textLogOut;
+	}
 }
